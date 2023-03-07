@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/horizon" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <div id="info">
+                <img src="img/logo.png" alt="logo">
+            <div>
+                <h2>Fiche de personnage</h2>
+                <div>
+                    <div class="twoinput">
+                        <div class="input-info">
+                            <label for="name">Nom: </label>
+                            <input type="text" name="name">
+                        </div>
+                        <div class="input-info">
+                            <label for="player">Joueur: </label>
+                            <input type="text" name="player">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="twoinput">
+                            <div class="input-info">
+                                <label for="race">Espèce: </label>
+                                <input type="text" name="race">
+                            </div>
+                            <div class="input-info">
+                                <label for="class">Classe: </label>
+                                <input type="text" name="class">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-info">
+                        <label for="desc">Description: </label>
+                        <textarea name="desc" rows="3" ></textarea>
+                    </div>
+                    <div class="input-info">
+                        <label for="planet">Planète d'origine: </label>
+                        <input type="text" name="planet">
+                    </div>
+                    <div class="fourinput">
+                        <div class="input-info">
+                            <label for="age">Age: </label>
+                            <input type="text" name="age">
+                        </div>
+                        <div class="input-info">
+                            <label for="size">Taille: </label>
+                            <input type="text" name="size">
+                        </div>
+                        <div class="input-info">
+                            <label for="weight">Poids: </label>
+                            <input type="text" name="weight">
+                        </div>
+                        <div class="input-info">
+                            <label for="sex">Sexe: </label>
+                            <input type="text" name="sex">
+                        </div>
+                    </div>
+                    <div class="input-info">
+                        <label for="trait">Trait particulier: </label>
+                        <textarea name="trait" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="S-S-I">
+            <div id="stats">
+                <div id="characteristics">
+                    <div class="input-stats">
+                        <label for="strength">Force: </label>
+                        <input type="text" name="strength">
+                    </div>
+                    <div class="input-stats">
+                        <label for="agility">Adresse: </label>
+                        <input type="text" name="agility">
+                    </div>
+                    <div class="input-stats">
+                        <label for="intelligence">Intelligence: </label>
+                        <input type="text" name="intelligence">
+                    </div>
+                    <div class="input-stats">
+                        <label for="charism">Charisme: </label>
+                        <input type="text" name="charism">
+                    </div>
+                    <div class="input-stats">
+                        <label for="mental">Mental: </label>
+                        <input type="text" name="mental">
+                    </div>
+                </div>
+                <div id="hp">
+                    <div class="input-stats">
+                        <label for="health">Santé: </label>
+                        <input type="text" name="health">
+                    </div>
+                    <div class="input-stats-max">
+                        <label for="health-max">max: </label>
+                        <input type="text" name="health-max">
+                    </div>
+                </div>
+                <div>
+                    <div class="input-bar">
+                        <label for="critique">Critique: </label>
+                        <div>
+                            <input type="checkbox" name="critique">
+                            <input type="checkbox" name="critique">
+                            <input type="checkbox" name="critique">
+                            <input type="checkbox" name="critique">
+                            <input type="checkbox" name="critique">
+                        </div>
+                    </div>
+                </div>
+                <div id="stress">
+                    <div class="input-stats">
+                        <label for="stress">Stress: </label>
+                        <input type="text" name="stress">
+                    </div>
+                    <div class="input-stats-max">
+                        <label for="stress-max">max: </label>
+                        <input type="text" name="stress-max">
+                    </div>
+                </div>
+                <div class="input-stats">
+                    <label for="armor">Armure: </label>
+                    <input type="text" name="armor">
+                </div>
+                <div class="input-stats">
+                    <label for="luck">Chance: </label>
+                    <input type="text" name="luck">
+                </div>
+            </div>
+
+            <div id="skill-inventory">
+                <div>
+                    <div id="skill">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Compétences</th>
+                                    <th>+ 0</th>
+                                    <th>+ 10</th>
+                                    <th>+ 20</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p title="Force">Athlétisme</p></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td><p title="Charisme">Baratin</p></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td><p title="Intelligence">Bricolage</p></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td><p title="Intelligence">Conduite</p></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td><p title="Force">Corps à corps</p></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td><p title="Adresse">Discrétion</p></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td><p title="Intelligence">Érudit</p></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td><p title="Intelligence">Informatique</p></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td><p title="Charisme">Intimidation</p></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td><p title="Adresse">Maître du Beat</p></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td><p title="Charisme">Négociation</p></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td><p title="Charisme">Persuasion</p></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td><p title="Intelligence">Science</p></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td><p title="Intelligence">Soin</p></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td><p title="Force">Survie</p></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td><p title="Adresse">Tir</p></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td><p title="Adresse">Vol</p></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div id="weap-inv">
+                        <div id="weapon">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Arme</th>
+                                        <th>Dégâts</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="text"></td>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text"></td>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text"></td>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text"></td>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div id="inventory">
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <div class="input-stats">
+                                <label for="trait">Trait: </label>
+                                <input type="text" name="trait">
+                            </div>
+                            <div class="input-stats">
+                                <label for="descr-trait">Description: </label>
+                                <textarea name="descr-trait"></textarea>
+                            </div>
+                            <div class="input-stats">
+                                <label for="deutschMark">Deutsch Mark: </label>
+                                <input type="text" name="deutschMark">
+                            </div>
+                        </div>
+                        <div id="qualitee-defauts">
+
+                        </div>
+                    </div>
+
+                    <div id="xp">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>  
+    </div>
+
+</body>
+</html>

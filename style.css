@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Horizon', sans-serif;
+    font-size: 1.2rem;
+}
+#main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-top: 1%;
+}
+#info {
+    display: flex;
+    justify-content: center;
+}
+#info img {
+    width: 35%;
+    height: 35%;
+}
+h2 {
+    font-size: 42px;
+    text-align: center;
+}
+
+label {
+    min-width: fit-content;
+}
+input {
+    text-align: right;
+
+}
+input, textarea {
+    padding: 1%;
+}
+
+.input-info {
+    display: flex;
+    margin: 4px 0;
+}
+.input-info input, .input-info textarea {
+    width: 100%;
+}
+.twoinput, .fourinput {
+    display: flex;
+}
+.twoinput {
+    justify-content: space-between;
+}
+.twoinput>div{
+    width: 50%;
+}
+
+.foutinput>div{
+    width: 25%;
+}
+#S-S-I {
+    display: flex;
+}
+#stats {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+#stats>div {
+    padding: 4%;
+    border: 1px black solid;
+    border-radius: 2px;
+}
+#stats>div:not(:last-child) {
+    border-bottom: none;
+}
+.input-stats {
+    display: flex;
+    justify-content: space-between;
+}
+.input-stats input, .input-stats-max input{
+    width: 10%;
+}
+.input-stats-max {
+    display: flex;
+    justify-content: flex-end;
+}
+#skill-inventory {
+    width: 65%;
+}
+#skill, #weap-inv {
+    width: 50%;
+}
+
+.input-bar {
+    display: flex;
+    justify-content: space-between;
+}
+table, tr,th,td,tbody,thead,tb {
+    width: fit-content;
+}
