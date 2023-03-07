@@ -45,10 +45,10 @@ h2 {
 label {
     min-width: fit-content;
     align-self: center;
+    margin-right: 2%;
 }
 input {
     text-align: right;
-
 }
 input, textarea {
     padding: 1%;
@@ -104,9 +104,6 @@ input, textarea {
 .input-stats-max {
     display: flex;
     justify-content: flex-end;
-}
-.input-stats-max label {
-    margin-right: 2%;
 }
 #skill-inventory {
     width: 65%;
