@@ -3,6 +3,7 @@
     padding: 0;
     font-family: 'Horizon', sans-serif;
     font-size: 1.2rem;
+    white-space: nowrap;
 }
 #main {
     margin-left: auto;
@@ -25,6 +26,7 @@ h2 {
 
 label {
     min-width: fit-content;
+    align-self: center;
 }
 input {
     text-align: right;
@@ -49,6 +51,10 @@ input, textarea {
 }
 .twoinput>div{
     width: 50%;
+}
+#attributs {
+    display: flex;
+    flex-direction: column;
 }
 
 .foutinput>div{
@@ -81,6 +87,9 @@ input, textarea {
     display: flex;
     justify-content: flex-end;
 }
+.input-stats-max label {
+    margin-right: 2%;
+}
 #skill-inventory {
     width: 65%;
 }
@@ -92,6 +101,7 @@ input, textarea {
     display: flex;
     justify-content: space-between;
 }
-table, tr,th,td,tbody,thead,tb {
-    width: fit-content;
+table {
+    max-width: 100%;
+    padding: 5px;
 }
