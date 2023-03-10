@@ -24,10 +24,9 @@ input[type="checkbox"]:checked {
 }
 
 #main {
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    margin-top: 1%;
+    width: 50%;
+    margin: 3% auto;
+    border-radius: 5px;
 }
 #info {
     display: flex;
@@ -52,6 +51,10 @@ input {
 }
 input, textarea {
     padding: 1%;
+}
+textarea {
+    max-width: 100%;
+    min-width: 40%;
 }
 
 .input-info {
@@ -107,9 +110,38 @@ input, textarea {
 }
 #skill-inventory {
     width: 65%;
+    border: 1px solid black;
+    border-left: none;
+}
+#skill-inventory>div {
+    display: flex;
+    flex-direction: column;
+}
+#skill-inventory>div>div {
+    display: flex;
 }
 #skill, #weap-inv {
     width: 50%;
+    padding: 1%;
+    border-radius: 2px;
+}
+#skill {
+    border: 1px solid black;
+    border-left: none;
+    border-top: none;
+}
+#skill>div {
+    padding-top: 1%;
+}
+#skill>div>p:first-child {
+    margin-right: 2%;
+    text-align: end;
+}
+#skill p , #weap-inv p{
+    font-size: 0.85rem;
+}
+#weap-inv {
+    border-bottom: 1px solid black;
 }
 #skill>div{
     display: flex;
@@ -122,11 +154,23 @@ input, textarea {
 #skill>div>p:not(:first-child) {
     width: 14%;
 }
-#skill>div>p>input {
+#skill>div>p>input, #weap-inv>div>p>input {
     width: 100%;
 }
 #skill div:first-child {
     width: 100%;
+}
+
+#weapon>div {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+#weapon>div>p {
+    max-width: 50%;
+}
+#weapon>div>p>input, #inventory>p>input, #qualitee-defauts>p>input {
+    width: 98%!important;
 }
 
 .input-bar {
@@ -139,11 +183,35 @@ input, textarea {
     justify-content: space-evenly;
     align-items: center;
 }
-/* .input-bar>div:last-child>input{
+.input-bar>div:last-child>input{
     scale: 1.6;
-} */
+}
 
-table {
-    max-width: 100%;
-    padding: 5px;
+#other>div, #qualitee-defauts>div {
+    width: 50%;
+}
+#other {
+    border-bottom: 1px solid black;
+}
+#other>div>div {
+    padding: 1%;
+}
+#other>div:first-child {
+    border-right: 1px solid black;
+}
+#qualitee-defauts {
+    display: flex;
+    text-align: center;
+}
+#qualitee-defauts>div>p>input {
+    width: 96%;
+}
+
+#xp {
+    flex-direction: row!important;
+    justify-content: space-between;
+    padding: 1%;
+}
+#xp>input {
+    width: 47.5%;
 }
