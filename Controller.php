@@ -1,7 +1,6 @@
 <?php
 
-namespace Controller;
-use Model\Connect;
+use model\Connect;
 
 class Controller {
 
@@ -13,7 +12,8 @@ class Controller {
             SELECT *
             FROM joueur       
         ");
-      
+        $joueur= $requete->fetch(); 
+        $_COOKIE["tucki"] = $joueur;
         require "viewFiche.php";
     }
 
@@ -314,7 +314,7 @@ class Controller {
                         :experience )  
             ");
 
-            
+            $pdo = Connect::seConnecter(); 
 
             //Exécution de la requete SQL
             $requete->execute([
@@ -389,11 +389,14 @@ class Controller {
                 ":defautsThree" => $defautsThree,
                 ":experience" => $experience        
             ]);
-            header("Location:index.php?action=viewFiche");
+
+            header("Location:index.php?&action=viewFiche");
             die();
+
         }
+
         $pdo = Connect::seConnecter();
-        header("Location:index.php?action=viewFiche");
+        header("Location:index.php?&action=viewFiche");
         die;
 
     }

@@ -1,14 +1,11 @@
 <?php
     ob_start();
 
-    if($requete) {
-        $joueur= $requete->fetch(); 
-    }
-
+ var_dump($_POST);
 ?>
 
 <body>
-    <form action="index.php?action=addPlayer" method="get" id="main">
+    <form action="index.php?&action=addPlayer" method="post" id="main">
         <div id="info">
                 <img src="img/logo.png" alt="logo">
             <div>
@@ -154,105 +151,105 @@
                                 </div>
                                 <div>
                                     <p title="Force">Athlétisme</p>
-                                    <p><input type="checkbox" name="athletisme" value="0"></p>
-                                    <p><input type="checkbox" name="athletisme" value="10"></p>
-                                    <p><input type="checkbox" name="athletisme" value="20"></p>
+                                    <p><input type="radio" name="athletisme" value="0"></p>
+                                    <p><input type="radio" name="athletisme" value="10"></p>
+                                    <p><input type="radio" name="athletisme" value="20"></p>
                                 </div>
                                 <div>
                                     <p title="Charisme">Baratin</p>
-                                    <p><input type="checkbox" name="baratin" value="0"></p>
-                                    <p><input type="checkbox" name="baratin" value="10"></p>
-                                    <p><input type="checkbox" name="baratin" value="20"></p>
+                                    <p><input type="radio" name="baratin" value="0"></p>
+                                    <p><input type="radio" name="baratin" value="10"></p>
+                                    <p><input type="radio" name="baratin" value="20"></p>
                                 </div>
                                 <div>
                                     <p title="Intelligence">Bricolage</p>
-                                    <p><input type="checkbox" name="bricolage" value="0"></p>
-                                    <p><input type="checkbox" name="bricolage" value="10"></p>
-                                    <p><input type="checkbox" name="bricolage" value="20"></p>
+                                    <p><input type="radio" name="bricolage" value="0"></p>
+                                    <p><input type="radio" name="bricolage" value="10"></p>
+                                    <p><input type="radio" name="bricolage" value="20"></p>
                                 </div>
                                 <div>
                                     <p title="Intelligence">Conduite</p>
-                                    <p><input type="checkbox" name="conduite" value="0"></p>
-                                    <p><input type="checkbox" name="conduite" value="10"></p>
-                                    <p><input type="checkbox" name="conduite" value="20"></p>
+                                    <p><input type="radio" name="conduite" value="0"></p>
+                                    <p><input type="radio" name="conduite" value="10"></p>
+                                    <p><input type="radio" name="conduite" value="20"></p>
                                 </div>
                                 <div>
                                     <p title="Force">Corps à corps</p>
-                                    <p><input type="checkbox" name="corps_a_corps" value="0"></p>
-                                    <p><input type="checkbox" name="corps_a_corps" value="10"></p>
-                                    <p><input type="checkbox" name="corps_a_corps" value="20"></p>
+                                    <p><input type="radio" name="corps_a_corps" value="0"></p>
+                                    <p><input type="radio" name="corps_a_corps" value="10"></p>
+                                    <p><input type="radio" name="corps_a_corps" value="20"></p>
                                 </div>
                                 <div>
                                     <p title="Adresse">Discrétion</p>
-                                    <p><input type="checkbox" name="discretion" value="0"></p>
-                                    <p><input type="checkbox" name="discretion" value="10"></p>
-                                    <p><input type="checkbox" name="discretion" value="20"></p>
+                                    <p><input type="radio" name="discretion" value="0"></p>
+                                    <p><input type="radio" name="discretion" value="10"></p>
+                                    <p><input type="radio" name="discretion" value="20"></p>
                                 </div>
                                 <div>
                                     <p title="Intelligence">Érudit</p>
-                                    <p><input type="checkbox" name="erudit" value="0"></p>
-                                    <p><input type="checkbox" name="erudit" value="10"></p>
-                                    <p><input type="checkbox" name="erudit" value="20"></p>
+                                    <p><input type="radio" name="erudit" value="0"></p>
+                                    <p><input type="radio" name="erudit" value="10"></p>
+                                    <p><input type="radio" name="erudit" value="20"></p>
                                 </div>
                                 <div>
                                     <p title="Intelligence">Informatique</p>
-                                    <p><input type="checkbox" name="informatique" value="0"></p>
-                                    <p><input type="checkbox" name="informatique" value="10"></p>
-                                    <p><input type="checkbox" name="informatique" value="20"></p>
+                                    <p><input type="radio" name="informatique" value="0"></p>
+                                    <p><input type="radio" name="informatique" value="10"></p>
+                                    <p><input type="radio" name="informatique" value="20"></p>
                                 </div>
                                 <div>
                                     <p title="Charisme">Intimidation</p>
-                                    <p><input type="checkbox" name="intimidation" value="0"></p>
-                                    <p><input type="checkbox" name="intimidation" value="10"></p>
-                                    <p><input type="checkbox" name="intimidation" value="20"></p>
+                                    <p><input type="radio" name="intimidation" value="0"></p>
+                                    <p><input type="radio" name="intimidation" value="10"></p>
+                                    <p><input type="radio" name="intimidation" value="20"></p>
                                 </div>
                                 <div>
                                     <p title="Adresse">Maître du Beat</p>
-                                    <p><input type="checkbox" name="maitre_du_beat" value="0"></p>
-                                    <p><input type="checkbox" name="maitre_du_beat" value="10"></p>
-                                    <p><input type="checkbox" name="maitre_du_beat" value="20"></p>
+                                    <p><input type="radio" name="maitre_du_beat" value="0"></p>
+                                    <p><input type="radio" name="maitre_du_beat" value="10"></p>
+                                    <p><input type="radio" name="maitre_du_beat" value="20"></p>
                                 </div>
                                 <div>
                                     <p title="Charisme">Négociation</p>
-                                    <p><input type="checkbox" name="negociation" value="0"></p>
-                                    <p><input type="checkbox" name="negociation" value="10"></p>
-                                    <p><input type="checkbox" name="negociation" value="20"></p>
+                                    <p><input type="radio" name="negociation" value="0"></p>
+                                    <p><input type="radio" name="negociation" value="10"></p>
+                                    <p><input type="radio" name="negociation" value="20"></p>
                                 </div>
                                 <div>
                                     <p title="Charisme">Persuasion</p>
-                                    <p><input type="checkbox" name="persuasion" value="0"></p>
-                                    <p><input type="checkbox" name="persuasion" value="10"></p>
-                                    <p><input type="checkbox" name="persuasion" value="20"></p>
+                                    <p><input type="radio" name="persuasion" value="0"></p>
+                                    <p><input type="radio" name="persuasion" value="10"></p>
+                                    <p><input type="radio" name="persuasion" value="20"></p>
                                 </div>
                                 <div>
                                     <p title="Intelligence">Science</p>
-                                    <p><input type="checkbox" name="science" value="0"></p>
-                                    <p><input type="checkbox" name="science" value="10"></p>
-                                    <p><input type="checkbox" name="science" value="20"></p>
+                                    <p><input type="radio" name="science" value="0"></p>
+                                    <p><input type="radio" name="science" value="10"></p>
+                                    <p><input type="radio" name="science" value="20"></p>
                                 </div>
                                 <div>
                                     <p title="Intelligence">Soin</p>
-                                    <p><input type="checkbox"></p>
-                                    <p><input type="checkbox"></p>
-                                    <p><input type="checkbox"></p>
+                                    <p><input type="radio" name="soin" value="0"></p>
+                                    <p><input type="radio" name="soin" value="10"></p>
+                                    <p><input type="radio" name="soin" value="20"></p>
                                 </div>
                                 <div>
                                     <p title="Force">Survie</p>
-                                    <p><input type="checkbox"></p>
-                                    <p><input type="checkbox"></p>
-                                    <p><input type="checkbox"></p>
+                                    <p><input type="radio" name="survie" value="0"></p>
+                                    <p><input type="radio" name="survie" value="10"></p>
+                                    <p><input type="radio" name="survie" value="20"></p>
                                 </div>
                                 <div>
                                     <p title="Adresse">Tir</p>
-                                    <p><input type="checkbox"></p>
-                                    <p><input type="checkbox"></p>
-                                    <p><input type="checkbox"></p>
+                                    <p><input type="radio" name="tir" value="0"></p>
+                                    <p><input type="radio" name="tir" value="10"></p>
+                                    <p><input type="radio" name="tir" value="20"></p>
                                 </div>
                                 <div>
                                     <p title="Adresse">Vol</p>
-                                    <p><input type="checkbox"></p>
-                                    <p><input type="checkbox"></p>
-                                    <p><input type="checkbox"></p>
+                                    <p><input type="radio" name="vol" value="0"></p>
+                                    <p><input type="radio" name="vol" value="10"></p>
+                                    <p><input type="radio" name="vol" value="20"></p>
                                 </div>
                         </div>
 
@@ -263,21 +260,18 @@
                                         <p>Dégâts</p>
                                     </div>
                                     <div>
-                                        <p><input type="text"></p>
-                                        <p><input type="text"></p>
+                                        <p><input type="text" name="armeOne" placeholder="<?= $player["armeOne"] ?>"></p>
+                                        <p><input type="text" name="degatsOne" placeholder="<?= $player["armeOne"] ?>"></p>
                                     </div>
                                     <div>
-                                        <p><input type="text"></p>
-                                        <p><input type="text"></p>
+                                        <p><input type="text" name="armeTwo" placeholder="<?= $player["armeTwo"] ?>"></p>
+                                        <p><input type="text" name="armeTwo" placeholder="<?= $player["armeTwo"] ?>"></p>
                                     </div>
                                     <div>
-                                        <p><input type="text"></p>
-                                        <p><input type="text"></p>
+                                        <p><input type="text" name="armeThree" placeholder="<?= $player["armeThree"] ?>"></p>
+                                        <p><input type="text" name="armeThree" placeholder="<?= $player["armeThree"] ?>"></p>
                                     </div>
-                                    <div>
-                                        <p><input type="text"></p>
-                                        <p><input type="text"></p>
-                                    </div>
+
 
                         </div>
 
@@ -341,6 +335,7 @@
                         <label for="">Expérience</label>
                         <input type="text">
                     </div>
+                    <input type="submit" >
             </div>
         </div>  
 </form>
@@ -349,8 +344,6 @@
 
 <?php
 
-$titre = "Détail de l'Acteur";
-$titre_secondaire = "Détail de l'Acteur";
 $contenu = ob_get_clean();
 require "template.php";
 
