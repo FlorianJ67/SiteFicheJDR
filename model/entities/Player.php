@@ -11,22 +11,22 @@
         private $espece;
         private $classe;
         private $description;
-        private $planete_origine;
+        private $planeteOrigine;
         private $age;
         private $taille;
         private $poids;
         private $sex;
-        private $trait_particulier;
+        private $traitParticulier;
         private $force;
         private $adresse;
         private $intelligence;
         private $charisme;
         private $mental;
         private $sante;
-        private $sante_max;
+        private $santeMax;
         private $critique;
         private $stress;
-        private $stress_max;
+        private $stressMax;
         private $armure;
         private $chance;
         private $attributsOne;
@@ -36,12 +36,12 @@
         private $baratin;
         private $bricolage;
         private $conduite;
-        private $corps_a_corps;
+        private $corpsACorps;
         private $discretion;
         private $erudit;
         private $informatique;
         private $intimidation;
-        private $maitre_du_beat;
+        private $maitreDuBeat;
         private $negociation;
         private $persuasion;
         private $science;
@@ -55,19 +55,19 @@
         private $degatsOne;
         private $degatsTwo;
         private $degatsThree;
-        private $inventaire_1;
-        private $inventaire_2;
-        private $inventaire_3;
-        private $inventaire_4;
-        private $inventaire_5;
-        private $inventaire_6;
-        private $inventaire_7;
-        private $inventaire_8;
-        private $inventaire_9;
-        private $inventaire_10;
+        private $inventaire1;
+        private $inventaire2;
+        private $inventaire3;
+        private $inventaire4;
+        private $inventaire5;
+        private $inventaire6;
+        private $inventaire7;
+        private $inventaire8;
+        private $inventaire9;
+        private $inventaire10;
         private $trait;
-        private $description_trait;
-        private $deutsch_mark;
+        private $descriptionTrait;
+        private $deutschMark;
         private $qualiteOne;
         private $qualiteTwo;
         private $qualiteThree;
@@ -192,15 +192,15 @@
          */
         public function getPlaneteOrigine()
         {
-                return $this->planete_origine;
+                return $this->planeteOrigine;
         }
 
         /**
          * Set the value of planete_origine
          */
-        public function setPlaneteOrigine($planete_origine): self
+        public function setPlaneteOrigine($planeteOrigine): self
         {
-                $this->planete_origine = $planete_origine;
+                $this->planeteOrigine = $planeteOrigine;
 
                 return $this;
         }
@@ -282,15 +282,15 @@
          */
         public function getTraitParticulier()
         {
-                return $this->trait_particulier;
+                return $this->traitParticulier;
         }
 
         /**
          * Set the value of trait_particulier
          */
-        public function setTraitParticulier($trait_particulier): self
+        public function setTraitParticulier($traitParticulier): self
         {
-                $this->trait_particulier = $trait_particulier;
+                $this->traitParticulier = $traitParticulier;
 
                 return $this;
         }
@@ -408,15 +408,15 @@
          */
         public function getSanteMax()
         {
-                return $this->sante_max;
+                return $this->santeMax;
         }
 
         /**
          * Set the value of sante_max
          */
-        public function setSanteMax($sante_max): self
+        public function setSanteMax($santeMax): self
         {
-                $this->sante_max = $sante_max;
+                $this->santeMax = $santeMax;
 
                 return $this;
         }
@@ -462,15 +462,15 @@
          */
         public function getStressMax()
         {
-                return $this->stress_max;
+                return $this->stressMax;
         }
 
         /**
          * Set the value of stress_max
          */
-        public function setStressMax($stress_max): self
+        public function setStressMax($stressMax): self
         {
-                $this->stress_max = $stress_max;
+                $this->stressMax = $stressMax;
 
                 return $this;
         }
@@ -642,15 +642,15 @@
          */
         public function getCorpsACorps()
         {
-                return $this->corps_a_corps;
+                return $this->corpsACorps;
         }
 
         /**
          * Set the value of corps_a_corps
          */
-        public function setCorpsACorps($corps_a_corps): self
+        public function setCorpsACorps($corpsACorps): self
         {
-                $this->corps_a_corps = $corps_a_corps;
+                $this->corpsACorps = $corpsACorps;
 
                 return $this;
         }
@@ -732,15 +732,15 @@
          */
         public function getMaitreDuBeat()
         {
-                return $this->maitre_du_beat;
+                return $this->maitreDuBeat;
         }
 
         /**
          * Set the value of maitre_du_beat
          */
-        public function setMaitreDuBeat($maitre_du_beat): self
+        public function setMaitreDuBeat($maitreDuBeat): self
         {
-                $this->maitre_du_beat = $maitre_du_beat;
+                $this->maitreDuBeat = $maitreDuBeat;
 
                 return $this;
         }
@@ -985,15 +985,15 @@
          */
         public function getInventaire1()
         {
-                return $this->inventaire_1;
+                return $this->inventaire1;
         }
 
         /**
          * Set the value of inventaire_1
          */
-        public function setInventaire1($inventaire_1): self
+        public function setInventaire1($inventaire1): self
         {
-                $this->inventaire_1 = $inventaire_1;
+                $this->inventaire1 = $inventaire1;
 
                 return $this;
         }
@@ -1003,15 +1003,15 @@
          */
         public function getInventaire2()
         {
-                return $this->inventaire_2;
+                return $this->inventaire2;
         }
 
         /**
          * Set the value of inventaire_2
          */
-        public function setInventaire2($inventaire_2): self
+        public function setInventaire2($inventaire2): self
         {
-                $this->inventaire_2 = $inventaire_2;
+                $this->inventaire2 = $inventaire2;
 
                 return $this;
         }
@@ -1021,15 +1021,15 @@
          */
         public function getInventaire3()
         {
-                return $this->inventaire_3;
+                return $this->inventaire3;
         }
 
         /**
          * Set the value of inventaire_3
          */
-        public function setInventaire3($inventaire_3): self
+        public function setInventaire3($inventaire3): self
         {
-                $this->inventaire_3 = $inventaire_3;
+                $this->inventaire3 = $inventaire3;
 
                 return $this;
         }
@@ -1039,15 +1039,15 @@
          */
         public function getInventaire4()
         {
-                return $this->inventaire_4;
+                return $this->inventaire4;
         }
 
         /**
          * Set the value of inventaire_4
          */
-        public function setInventaire4($inventaire_4): self
+        public function setInventaire4($inventaire4): self
         {
-                $this->inventaire_4 = $inventaire_4;
+                $this->inventaire4 = $inventaire4;
 
                 return $this;
         }
@@ -1057,15 +1057,15 @@
          */
         public function getInventaire5()
         {
-                return $this->inventaire_5;
+                return $this->inventaire5;
         }
 
         /**
          * Set the value of inventaire_5
          */
-        public function setInventaire5($inventaire_5): self
+        public function setInventaire5($inventaire5): self
         {
-                $this->inventaire_5 = $inventaire_5;
+                $this->inventaire5 = $inventaire5;
 
                 return $this;
         }
@@ -1075,15 +1075,15 @@
          */
         public function getInventaire6()
         {
-                return $this->inventaire_6;
+                return $this->inventaire6;
         }
 
         /**
          * Set the value of inventaire_6
          */
-        public function setInventaire6($inventaire_6): self
+        public function setInventaire6($inventaire6): self
         {
-                $this->inventaire_6 = $inventaire_6;
+                $this->inventaire6 = $inventaire6;
 
                 return $this;
         }
@@ -1093,15 +1093,15 @@
          */
         public function getInventaire7()
         {
-                return $this->inventaire_7;
+                return $this->inventaire7;
         }
 
         /**
          * Set the value of inventaire_7
          */
-        public function setInventaire7($inventaire_7): self
+        public function setInventaire7($inventaire7): self
         {
-                $this->inventaire_7 = $inventaire_7;
+                $this->inventaire7 = $inventaire7;
 
                 return $this;
         }
@@ -1111,15 +1111,15 @@
          */
         public function getInventaire8()
         {
-                return $this->inventaire_8;
+                return $this->inventaire8;
         }
 
         /**
          * Set the value of inventaire_8
          */
-        public function setInventaire8($inventaire_8): self
+        public function setInventaire8($inventaire8): self
         {
-                $this->inventaire_8 = $inventaire_8;
+                $this->inventaire8 = $inventaire8;
 
                 return $this;
         }
@@ -1129,15 +1129,15 @@
          */
         public function getInventaire9()
         {
-                return $this->inventaire_9;
+                return $this->inventaire9;
         }
 
         /**
          * Set the value of inventaire_9
          */
-        public function setInventaire9($inventaire_9): self
+        public function setInventaire9($inventaire9): self
         {
-                $this->inventaire_9 = $inventaire_9;
+                $this->inventaire9 = $inventaire9;
 
                 return $this;
         }
@@ -1147,15 +1147,15 @@
          */
         public function getInventaire10()
         {
-                return $this->inventaire_10;
+                return $this->inventaire10;
         }
 
         /**
          * Set the value of inventaire_10
          */
-        public function setInventaire10($inventaire_10): self
+        public function setInventaire10($inventaire10): self
         {
-                $this->inventaire_10 = $inventaire_10;
+                $this->inventaire10 = $inventaire10;
 
                 return $this;
         }
@@ -1183,15 +1183,15 @@
          */
         public function getDescriptionTrait()
         {
-                return $this->description_trait;
+                return $this->descriptionTrait;
         }
 
         /**
          * Set the value of description_trait
          */
-        public function setDescriptionTrait($description_trait): self
+        public function setDescriptionTrait($descriptionTrait): self
         {
-                $this->description_trait = $description_trait;
+                $this->descriptionTrait = $descriptionTrait;
 
                 return $this;
         }
@@ -1201,15 +1201,15 @@
          */
         public function getDeutschMark()
         {
-                return $this->deutsch_mark;
+                return $this->deutschMark;
         }
 
         /**
          * Set the value of deutsch_mark
          */
-        public function setDeutschMark($deutsch_mark): self
+        public function setDeutschMark($deutschMark): self
         {
-                $this->deutsch_mark = $deutsch_mark;
+                $this->deutschMark = $deutschMark;
 
                 return $this;
         }

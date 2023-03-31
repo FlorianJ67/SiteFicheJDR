@@ -13,13 +13,17 @@ class PlayerController extends AbstractController implements ControllerInterface
 
         $playerManager = New PlayerManager;
 
-         return [
-             "view" => VIEW_DIR."fiche/viewFiche.php",
-             "data" => [
-                "player" => $playerManager->findAll(["pseudo", "DESC"])
+        $player = $playerManager->findOneById(1);
+
+        return [
+            "view" => VIEW_DIR."fiche/viewFiche.php",
+            "data" => [
+                "player" => $player
             ]
-         ];
+        ];
     }
+
+
 
     public function addOrModifyPlayer() {
 
@@ -27,8 +31,6 @@ class PlayerController extends AbstractController implements ControllerInterface
 
         if(isset($_POST['submit'])){
         
-            $id = filter_input(INPUT_POST, "id", FILTER_SANITIZE_NUMBER_INT);
-
             $nom = filter_input(INPUT_POST, "nom", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
             $pseudo = filter_input(INPUT_POST, "pseudo", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -39,7 +41,7 @@ class PlayerController extends AbstractController implements ControllerInterface
 
             $description = filter_input(INPUT_POST, "description", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-            $planete_origine = filter_input(INPUT_POST, "planete_origin", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            $planeteOrigine = filter_input(INPUT_POST, "planeteOrigin", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
             $age = filter_input(INPUT_POST, "age", FILTER_SANITIZE_NUMBER_INT);
 
@@ -49,7 +51,7 @@ class PlayerController extends AbstractController implements ControllerInterface
 
             $sex = filter_input(INPUT_POST, "sex", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-            $trait_particulier = filter_input(INPUT_POST, "trait_particulier", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            $traitParticulier = filter_input(INPUT_POST, "traitParticulier", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
             $force = filter_input(INPUT_POST, "force", FILTER_SANITIZE_NUMBER_INT);
 
@@ -63,13 +65,13 @@ class PlayerController extends AbstractController implements ControllerInterface
 
             $sante = filter_input(INPUT_POST, "sante", FILTER_SANITIZE_NUMBER_INT);
 
-            $sante_max = filter_input(INPUT_POST, "sante_max", FILTER_SANITIZE_NUMBER_INT);
+            $sante_max = filter_input(INPUT_POST, "santeMax", FILTER_SANITIZE_NUMBER_INT);
 
             $critique = filter_input(INPUT_POST, "critique", FILTER_SANITIZE_NUMBER_INT);
 
             $stress = filter_input(INPUT_POST, "stress", FILTER_SANITIZE_NUMBER_INT);
 
-            $stress_max = filter_input(INPUT_POST, "stress_max", FILTER_SANITIZE_NUMBER_INT);
+            $stressMax = filter_input(INPUT_POST, "stressMax", FILTER_SANITIZE_NUMBER_INT);
 
             $armure = filter_input(INPUT_POST, "armure", FILTER_SANITIZE_NUMBER_INT);
 
@@ -89,7 +91,7 @@ class PlayerController extends AbstractController implements ControllerInterface
 
             $conduite = filter_input(INPUT_POST, "conduite", FILTER_SANITIZE_NUMBER_INT);
 
-            $corps_a_corps = filter_input(INPUT_POST, "corps_a_corps", FILTER_SANITIZE_NUMBER_INT);
+            $corpsACorps = filter_input(INPUT_POST, "corpsACorps", FILTER_SANITIZE_NUMBER_INT);
 
             $discretion = filter_input(INPUT_POST, "discretion", FILTER_SANITIZE_NUMBER_INT);
 
@@ -99,7 +101,7 @@ class PlayerController extends AbstractController implements ControllerInterface
 
             $intimidation = filter_input(INPUT_POST, "intimidation", FILTER_SANITIZE_NUMBER_INT);
 
-            $maitre_du_beat = filter_input(INPUT_POST, "maitre_du_beat", FILTER_SANITIZE_NUMBER_INT);
+            $maitreDuBeat = filter_input(INPUT_POST, "maitreDuBeat", FILTER_SANITIZE_NUMBER_INT);
 
             $negociation = filter_input(INPUT_POST, "negociation", FILTER_SANITIZE_NUMBER_INT);
 
@@ -130,31 +132,31 @@ class PlayerController extends AbstractController implements ControllerInterface
             $degatsThree = filter_input(INPUT_POST, "degatsThree", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
 
-            $inventaire_1 = filter_input(INPUT_POST, "inventaire_1", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            $inventaire1 = filter_input(INPUT_POST, "inventaire1", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-            $inventaire_2 = filter_input(INPUT_POST, "inventaire_2", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            $inventaire2 = filter_input(INPUT_POST, "inventaire2", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-            $inventaire_3 = filter_input(INPUT_POST, "inventaire_3", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            $inventaire3 = filter_input(INPUT_POST, "inventaire3", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-            $inventaire_4 = filter_input(INPUT_POST, "inventaire_4", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            $inventaire4 = filter_input(INPUT_POST, "inventaire4", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-            $inventaire_5 = filter_input(INPUT_POST, "inventaire_5", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            $inventaire5 = filter_input(INPUT_POST, "inventaire5", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-            $inventaire_6 = filter_input(INPUT_POST, "inventaire_6", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            $inventaire6 = filter_input(INPUT_POST, "inventaire6", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-            $inventaire_7 = filter_input(INPUT_POST, "inventaire_7", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            $inventaire7 = filter_input(INPUT_POST, "inventaire7", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-            $inventaire_8 = filter_input(INPUT_POST, "inventaire_8", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            $inventaire8 = filter_input(INPUT_POST, "inventaire8", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-            $inventaire_9 = filter_input(INPUT_POST, "inventaire_9", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            $inventaire9 = filter_input(INPUT_POST, "inventaire9", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-            $inventaire_10 = filter_input(INPUT_POST, "inventaire_10", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            $inventaire10 = filter_input(INPUT_POST, "inventaire10", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
             $trait = filter_input(INPUT_POST, "trait", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-            $description_trait = filter_input(INPUT_POST, "description_trait", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            $descriptionTrait = filter_input(INPUT_POST, "descriptionTrait", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-            $deutsch_mark = filter_input(INPUT_POST, "deutsch_mark", FILTER_SANITIZE_NUMBER_INT);
+            $deutschMark = filter_input(INPUT_POST, "deutschMark", FILTER_SANITIZE_NUMBER_INT);
 
             $qualiteOne = filter_input(INPUT_POST, "qualiteOne", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
@@ -170,19 +172,21 @@ class PlayerController extends AbstractController implements ControllerInterface
 
             $experience = filter_input(INPUT_POST, "experience", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
+            if ($playerManager->findOneByPseudo($pseudo)) {
 
-            $IdPlayer = $playerManager->add([   'id' => $id,
-                                                'nom' => $nom,
+            } else {
+            
+            $IdPlayer = $playerManager->add([   'nom' => $nom,
                                                 'pseudo' => $pseudo,
                                                 'espece' => $espece,
                                                 'classe' => $classe,
                                                 'description' => $description ,
-                                                'planete_origine' => $planete_origine ,
+                                                'planeteOrigine' => $planeteOrigine ,
                                                 'age' => $age ,
                                                 'taille' => $taille ,
                                                 'poids' => $poids,
                                                 'sex' => $sex,
-                                                'trait_particulier' => $trait_particulier,
+                                                'traitParticulier' => $traitParticulier,
                                                 'force' => $force,
                                                 'adresse' => $adresse,
                                                 'intelligence' => $intelligence,
@@ -190,9 +194,9 @@ class PlayerController extends AbstractController implements ControllerInterface
                                                 'mental' => $mental,
                                                 'sante' => $sante,
                                                 'sante_max' => $sante_max,
-                                                'critique' => $critique,
+                                                // 'critique' => $critique,
                                                 'stress' => $stress,
-                                                'stress_max' => $stress_max,
+                                                'stressMax' => $stressMax,
                                                 'armure' => $armure,
                                                 'chance' => $chance,
                                                 'attributsOne' => $attributsOne,
@@ -202,12 +206,12 @@ class PlayerController extends AbstractController implements ControllerInterface
                                                 'baratin' => $baratin,
                                                 'bricolage' => $bricolage,
                                                 'conduite' => $conduite,
-                                                'corps_a_corps' => $corps_a_corps,
+                                                'corpsACorps' => $corpsACorps,
                                                 'discretion' => $discretion,
                                                 'erudit' => $erudit,
                                                 'informatique' => $informatique,
                                                 'intimidation' => $intimidation,
-                                                'maitre_du_beat' => $maitre_du_beat,
+                                                'maitreDuBeat' => $maitreDuBeat,
                                                 'negociation' => $negociation,
                                                 'persuasion' => $persuasion,
                                                 'science' => $science,
@@ -221,19 +225,19 @@ class PlayerController extends AbstractController implements ControllerInterface
                                                 'degatsOne' => $degatsOne,
                                                 'degatsTwo' => $degatsTwo,
                                                 'degatsThree' => $degatsThree,
-                                                'inventaire_1' => $inventaire_1,
-                                                'inventaire_2' => $inventaire_2,
-                                                'inventaire_3' => $inventaire_3,
-                                                'inventaire_4' => $inventaire_4,
-                                                'inventaire_5' => $inventaire_5,
-                                                'inventaire_6' => $inventaire_6,
-                                                'inventaire_7' => $inventaire_7,
-                                                'inventaire_8' => $inventaire_8,
-                                                'inventaire_9' => $inventaire_9,
-                                                'inventaire_10' => $inventaire_10,
+                                                'inventaire1' => $inventaire1,
+                                                'inventaire2' => $inventaire2,
+                                                'inventaire3' => $inventaire3,
+                                                'inventaire4' => $inventaire4,
+                                                'inventaire5' => $inventaire5,
+                                                'inventaire6' => $inventaire6,
+                                                'inventaire7' => $inventaire7,
+                                                'inventaire8' => $inventaire8,
+                                                'inventaire9' => $inventaire9,
+                                                'inventaire10' => $inventaire10,
                                                 'trait' => $trait,
-                                                'description_trait' => $description_trait,
-                                                'deutsch_mark' => $deutsch_mark,
+                                                'descriptionTrait' => $descriptionTrait,
+                                                'deutschMark' => $deutschMark,
                                                 'qualiteOne' => $qualiteOne,
                                                 'qualiteTwo' => $qualiteTwo,
                                                 'qualiteThree' => $qualiteThree,
@@ -241,8 +245,98 @@ class PlayerController extends AbstractController implements ControllerInterface
                                                 'defautsTwo' => $defautsTwo,
                                                 'defautsThree' => $defautsThree,
                                                 'experience' => $experience
-        ]);
+            ]);
+
+            return [
+                "view" => VIEW_DIR."fiche/viewFiche.php",
+                "data" => [
+                    "player" => $playerManager->findOneById($IdPlayer)
+                ]
+            ];
+        }
+    }
+            $player = $playerManager->findOneById(1);
+
+            return [
+                "view" => VIEW_DIR."fiche/viewFiche.php",
+                "data" => [
+                    "player" => $player
+                ]
+            ];
         }
 
+
+
+        // $id = null;
+        // $nom = null;
+        // $pseudo = null;
+        // $espece = null;
+        // $classe = null;
+        // $description = null;
+        // $planete_origine = null;
+        // $age = null;
+        // $taille = null;
+        // $poids = null;
+        // $sex = null;
+        // $trait_particulier = null;
+        // $force = null;
+        // $adresse = null;
+        // $intelligence = null;
+        // $charisme = null;
+        // $mental = null;
+        // $sante = null;
+        // $sante_max = null;
+        // $critique = null;
+        // $stress = null;
+        // $stress_max = null;
+        // $armure = null;
+        // $chance = null;
+        // $attributsOne = null;
+        // $attributsTwo = null;
+        // $attributsThree = null;
+        // $athletisme = null;
+        // $baratin = null;
+        // $bricolage = null;
+        // $conduite = null;
+        // $corps_a_corps = null;
+        // $discretion = null;
+        // $erudit = null;
+        // $informatique = null;
+        // $intimidation = null;
+        // $maitre_du_beat = null;
+        // $negociation = null;
+        // $persuasion = null;
+        // $science = null;
+        // $soin = null;
+        // $survie = null;
+        // $tir = null;
+        // $vol = null;
+        // //armes
+        // $armeOne = null;
+        // $armeTwo = null;
+        // $armeThree = null;
+        // //dgt
+        // $degatsOne = null;
+        // $degatsTwo = null;
+        // $degatsThree = null;
+        // $inventaire_1 = null;
+        // $inventaire_2 = null;
+        // $inventaire_3 = null;
+        // $inventaire_4 = null;
+        // $inventaire_5 = null;
+        // $inventaire_6 = null;
+        // $inventaire_7 = null;
+        // $inventaire_8 = null;
+        // $inventaire_9 = null;
+        // $inventaire_10 = null;
+        // $trait = null;
+        // $description_trait = null;
+        // $deutsch_mark = null;
+        // $qualiteOne = null;
+        // $qualiteTwo = null;
+        // $qualiteThree = null;
+        // $defautsOne = null;
+        // $defautsTwo = null;
+        // $defautsThree = null;
+        // $experience = null;
     }
-}

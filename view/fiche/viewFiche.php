@@ -1,20 +1,21 @@
 <?php
 
-$player = $result["data"]['player'];
-
+if(isset($result["data"]['player'])){
+    $joueur = $result["data"]['player'];
+}
 ?>
 
 <body>
-    <form action="index.php?&action=addPlayer" method="post" id="main">
+    <form action="index.php?ctrl=player&action=addOrModifyPlayer" method="post" id="main">
         <div id="info">
-                <img src="img/logo.png" alt="logo">
+                <img src="./public/img/logo.png" alt="logo">
             <div>
                 <h2>Fiche de personnage</h2>
                 <div>
                     <div class="twoinput">
                         <div class="input-info">
                             <label for="nom">Nom: </label>
-                            <input type="text" name="nom" value="<?=$joueur->getnom()?>">
+                            <input type="text" name="nom" value="<?=$joueur->getNom()?>">
                         </div>
                         <div class="input-info">
                             <label for="player">Joueur: </label>
@@ -35,16 +36,16 @@ $player = $result["data"]['player'];
                     </div>
                     <div class="input-info">
                         <label for="desc">Description: </label>
-                        <textarea name="desc" rows="3" value="<?=$joueur->getdescription()?>"></textarea>
+                        <textarea name="desc" rows="3"><?=$joueur->getDescription()?></textarea>
                     </div>
                     <div class="input-info">
                         <label for="planet">Planète d'origine: </label>
-                        <input type="text" name="planet" value="<?=$joueur->getplanete_origine()?>">
+                        <input type="text" name="planet" value="<?=$joueur->getPlaneteOrigine()?>">
                     </div>
                     <div class="fourinput">
                         <div class="input-info">
                             <label for="age">Age: </label>
-                            <input type="text" name="age" value="<?=$joueur->getage()?>">
+                            <input type="text" name="age" value="<?=$joueur->getAge()?>">
                         </div>
                         <div class="input-info">
                             <label for="size">Taille: </label>
@@ -61,7 +62,7 @@ $player = $result["data"]['player'];
                     </div>
                     <div class="input-info">
                         <label for="trait">Trait particulier: </label>
-                        <textarea name="trait" rows="3" value="<?=$joueur->gettrait_particulier()?>"></textarea>
+                        <textarea name="trait" rows="3" ><?=$joueur->gettraitParticulier()?></textarea>
                     </div>
                 </div>
             </div>
@@ -98,7 +99,7 @@ $player = $result["data"]['player'];
                     </div>
                     <div class="input-stats-max">
                         <label for="health-max">max: </label>
-                        <input type="text" name="health-max" value="<?=$joueur->getsante_max()?>">
+                        <input type="text" name="health-max" value="<?=$joueur->getsanteMax()?>">
                     </div>
                 </div>
                 <div>
@@ -120,7 +121,7 @@ $player = $result["data"]['player'];
                     </div>
                     <div class="input-stats-max">
                         <label for="stress-max">max: </label>
-                        <input type="text" name="stress-max" value="<?=$joueur->getstress_max()?>">
+                        <input type="text" name="stress-max" value="<?=$joueur->getstressMax()?>">
                     </div>
                 </div>
                 <div class="input-stats">
@@ -260,19 +261,17 @@ $player = $result["data"]['player'];
                                         <p>Dégâts</p>
                                     </div>
                                     <div>
-                                        <p><input type="text" name="armeOne" value="<?= $player["armeOne"] ?>"></p>
-                                        <p><input type="text" name="degatsOne" value="<?= $player["armeOne"] ?>"></p>
+                                        <p><input type="text" name="armeOne" value="<?= $joueur->getArmeOne() ?>"></p>
+                                        <p><input type="text" name="degatsOne" value="<?= $joueur->getdegatsOne() ?>"></p>
                                     </div>
                                     <div>
-                                        <p><input type="text" name="armeTwo" value="<?= $player["armeTwo"] ?>"></p>
-                                        <p><input type="text" name="armeTwo" value="<?= $player["armeTwo"] ?>"></p>
+                                        <p><input type="text" name="armeTwo" value="<?= $joueur->getarmeTwo() ?>"></p>
+                                        <p><input type="text" name="degatsTwo" value="<?= $joueur->getdegatsTwo() ?>"></p>
                                     </div>
                                     <div>
-                                        <p><input type="text" name="armeThree" value="<?= $player["armeThree"] ?>"></p>
-                                        <p><input type="text" name="armeThree" value="<?= $player["armeThree"] ?>"></p>
+                                        <p><input type="text" name="armeThree" value="<?= $joueur->getarmeThree() ?>"></p>
+                                        <p><input type="text" name="degatsThree" value="<?= $joueur->getdegatsThree() ?>"></p>
                                     </div>
-
-
                         </div>
 
                         <div id="inventory">
@@ -340,11 +339,3 @@ $player = $result["data"]['player'];
         </div>  
 </form>
 
-
-
-<?php
-
-$contenu = ob_get_clean();
-require "template.php";
-
-?>
