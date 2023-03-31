@@ -1,7 +1,7 @@
 <?php
-    ob_start();
 
- var_dump($_POST);
+$player = $result["data"]['player'];
+
 ?>
 
 <body>
@@ -14,54 +14,54 @@
                     <div class="twoinput">
                         <div class="input-info">
                             <label for="nom">Nom: </label>
-                            <input type="text" name="nom" placeholder="<?=$joueur['nom']?>">
+                            <input type="text" name="nom" value="<?=$joueur->getnom()?>">
                         </div>
                         <div class="input-info">
                             <label for="player">Joueur: </label>
-                            <input type="text" name="player" placeholder="<?=$joueur['pseudo']?>">
+                            <input type="text" name="player" value="<?=$joueur->getpseudo()?>">
                         </div>
                     </div>
                     <div>
                         <div class="twoinput">
                             <div class="input-info">
                                 <label for="race">Espèce: </label>
-                                <input type="text" name="race" placeholder="<?=$joueur['espece']?>">
+                                <input type="text" name="race" value="<?=$joueur->getespece()?>">
                             </div>
                             <div class="input-info">
                                 <label for="class">Classe: </label>
-                                <input type="text" name="class" placeholder="<?=$joueur['classe']?>">
+                                <input type="text" name="class" value="<?=$joueur->getclasse()?>">
                             </div>
                         </div>
                     </div>
                     <div class="input-info">
                         <label for="desc">Description: </label>
-                        <textarea name="desc" rows="3" placeholder="<?=$joueur['description']?>"></textarea>
+                        <textarea name="desc" rows="3" value="<?=$joueur->getdescription()?>"></textarea>
                     </div>
                     <div class="input-info">
                         <label for="planet">Planète d'origine: </label>
-                        <input type="text" name="planet" placeholder="<?=$joueur['planete_origine']?>">
+                        <input type="text" name="planet" value="<?=$joueur->getplanete_origine()?>">
                     </div>
                     <div class="fourinput">
                         <div class="input-info">
                             <label for="age">Age: </label>
-                            <input type="text" name="age" placeholder="<?=$joueur['age']?>">
+                            <input type="text" name="age" value="<?=$joueur->getage()?>">
                         </div>
                         <div class="input-info">
                             <label for="size">Taille: </label>
-                            <input type="text" name="size" placeholder="<?=$joueur['taille']?>">
+                            <input type="text" name="size" value="<?=$joueur->gettaille()?>">
                         </div>
                         <div class="input-info">
                             <label for="weight">Poids: </label>
-                            <input type="text" name="weight" placeholder="<?=$joueur['poids']?>">
+                            <input type="text" name="weight" value="<?=$joueur->getpoids()?>">
                         </div>
                         <div class="input-info">
                             <label for="sex">Sexe: </label>
-                            <input type="text" name="sex" placeholder="<?=$joueur['sex']?>">
+                            <input type="text" name="sex" value="<?=$joueur->getsex()?>">
                         </div>
                     </div>
                     <div class="input-info">
                         <label for="trait">Trait particulier: </label>
-                        <textarea name="trait" rows="3" placeholder="<?=$joueur['trait_particulier']?>"></textarea>
+                        <textarea name="trait" rows="3" value="<?=$joueur->gettrait_particulier()?>"></textarea>
                     </div>
                 </div>
             </div>
@@ -72,33 +72,33 @@
                 <div id="characteristics">
                     <div class="input-stats">
                         <label for="strength">Force: </label>
-                        <input type="text" name="strength" placeholder="<?=$joueur['force']?>">
+                        <input type="text" name="strength" value="<?=$joueur->getforce()?>">
                     </div>
                     <div class="input-stats">
                         <label for="agility">Adresse: </label>
-                        <input type="text" name="agility" placeholder="<?=$joueur['adresse']?>">
+                        <input type="text" name="agility" value="<?=$joueur->getadresse()?>">
                     </div>
                     <div class="input-stats">
                         <label for="intelligence">Intelligence: </label>
-                        <input type="text" name="intelligence" placeholder="<?=$joueur['intelligence']?>">
+                        <input type="text" name="intelligence" value="<?=$joueur->getintelligence()?>">
                     </div>
                     <div class="input-stats">
                         <label for="charism">Charisme: </label>
-                        <input type="text" name="charism" placeholder="<?=$joueur['charisme']?>">
+                        <input type="text" name="charism" value="<?=$joueur->getcharisme()?>">
                     </div>
                     <div class="input-stats">
                         <label for="mental">Mental: </label>
-                        <input type="text" name="mental" placeholder="<?=$joueur['mental']?>">
+                        <input type="text" name="mental" value="<?=$joueur->getmental()?>">
                     </div>
                 </div>
                 <div id="hp">
                     <div class="input-stats">
                         <label for="health">Santé: </label>
-                        <input type="text" name="health" placeholder="<?=$joueur['sante']?>">
+                        <input type="text" name="health" value="<?=$joueur->getsante()?>">
                     </div>
                     <div class="input-stats-max">
                         <label for="health-max">max: </label>
-                        <input type="text" name="health-max" placeholder="<?=$joueur['sante_max']?>">
+                        <input type="text" name="health-max" value="<?=$joueur->getsante_max()?>">
                     </div>
                 </div>
                 <div>
@@ -116,26 +116,26 @@
                 <div id="stress">
                     <div class="input-stats">
                         <label for="stress">Stress: </label>
-                        <input type="text" name="stress" placeholder="<?=$joueur['stress']?>">
+                        <input type="text" name="stress" value="<?=$joueur->getstress()?>">
                     </div>
                     <div class="input-stats-max">
                         <label for="stress-max">max: </label>
-                        <input type="text" name="stress-max" placeholder="<?=$joueur['stress_max']?>">
+                        <input type="text" name="stress-max" value="<?=$joueur->getstress_max()?>">
                     </div>
                 </div>
                 <div class="input-stats">
                     <label for="armor">Armure: </label>
-                    <input type="text" name="armor" placeholder="<?=$joueur['armure']?>">
+                    <input type="text" name="armor" value="<?=$joueur->getarmure()?>">
                 </div>
                 <div class="input-stats">
                     <label for="luck">Chance: </label>
-                    <input type="text" name="luck" placeholder="<?=$joueur['chance']?>">
+                    <input type="text" name="luck" value="<?=$joueur->getchance()?>">
                 </div>
                 <div id="attributs">
                     <label for="attributs">Attributs: </label>
-                    <input type="text" name="attributs" placeholder="<?=$joueur['attributsOne']?>">
-                    <input type="text" name="attributs" placeholder="<?=$joueur['attributsTwo']?>">
-                    <input type="text" name="attributs" placeholder="<?=$joueur['attributsThree']?>">
+                    <input type="text" name="attributs" value="<?=$joueur->getattributsOne()?>">
+                    <input type="text" name="attributs" value="<?=$joueur->getattributsTwo()?>">
+                    <input type="text" name="attributs" value="<?=$joueur->getattributsThree()?>">
                 </div>
             </div>
 
@@ -260,16 +260,16 @@
                                         <p>Dégâts</p>
                                     </div>
                                     <div>
-                                        <p><input type="text" name="armeOne" placeholder="<?= $player["armeOne"] ?>"></p>
-                                        <p><input type="text" name="degatsOne" placeholder="<?= $player["armeOne"] ?>"></p>
+                                        <p><input type="text" name="armeOne" value="<?= $player["armeOne"] ?>"></p>
+                                        <p><input type="text" name="degatsOne" value="<?= $player["armeOne"] ?>"></p>
                                     </div>
                                     <div>
-                                        <p><input type="text" name="armeTwo" placeholder="<?= $player["armeTwo"] ?>"></p>
-                                        <p><input type="text" name="armeTwo" placeholder="<?= $player["armeTwo"] ?>"></p>
+                                        <p><input type="text" name="armeTwo" value="<?= $player["armeTwo"] ?>"></p>
+                                        <p><input type="text" name="armeTwo" value="<?= $player["armeTwo"] ?>"></p>
                                     </div>
                                     <div>
-                                        <p><input type="text" name="armeThree" placeholder="<?= $player["armeThree"] ?>"></p>
-                                        <p><input type="text" name="armeThree" placeholder="<?= $player["armeThree"] ?>"></p>
+                                        <p><input type="text" name="armeThree" value="<?= $player["armeThree"] ?>"></p>
+                                        <p><input type="text" name="armeThree" value="<?= $player["armeThree"] ?>"></p>
                                     </div>
 
 
